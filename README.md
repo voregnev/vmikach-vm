@@ -13,6 +13,7 @@ yc serverless function version create \
   --entrypoint index.handler \
   --memory 128m \
   --execution-timeout 5s \
-  --environment FOLDER_ID=(yc init | jq folder_id), SERVER_ID (yc compute instance get --name) , BOT_TOKEN (from botFather)
+  --environment FOLDER_ID=$(yc config get folder-id), SERVER_ID $(yc compute instance --name SERVERNAME get --format json | jq -r '.id'
+), BOT_TOKEN (from botFather)
   
   source.zip
