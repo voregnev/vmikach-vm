@@ -5,7 +5,7 @@ import json
 
 server_id = os.environ.get('SERVER_ID')
 # put  list user_id
-user_ids = [#######]
+user_ids = [] #<--------id user in telegram
 url = 'https://compute.api.cloud.yandex.net/compute/v1/instances/'+server_id
 token = os.environ.get('BOT_TOKEN')
 bot = telebot.TeleBot(token)
